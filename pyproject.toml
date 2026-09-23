@@ -1,0 +1,14 @@
+[project]
+name = "agent-desk"
+version = "0.1.0"
+description = "Human desk for agent-exchange (NOW.md HTML viewer)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+agent-desk = "agent_desk.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
