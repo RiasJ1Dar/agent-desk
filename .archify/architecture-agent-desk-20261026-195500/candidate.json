@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "agent-desk: людський переглядач NOW.md",
+    "output": ".archify/architecture-agent-desk-20261026-195500/agent-desk.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/RiasJ1Dar/agent-desk.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "1b93805b31a503b292460a0400dfcd13091f18e3"
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [40, 40],
+    "cols": 5,
+    "cellW": 125,
+    "cellH": 70,
+    "gapX": 60,
+    "gapY": 90
+  },
+  "components": [
+    {
+      "id": "user", "type": "external", "label": "Користувач", "sublabel": "термінал",
+      "row": 1, "col": 0,
+      "sources": [{ "path": "README.md", "line": 38, "end_line": 48, "label": "використання" }]
+    },
+    {
+      "id": "cli", "type": "backend", "label": "agent-desk CLI", "sublabel": "підкоманда view",
+      "row": 1, "col": 1,
+      "sources": [
+        { "path": "agent_desk/cli.py", "line": 10, "end_line": 25 },
+        { "path": "pyproject.toml", "line": 9, "end_line": 10, "label": "точка входу" }
+      ]
+    },
+    {
+      "id": "render", "type": "backend", "label": "render_file", "sublabel": "читає файл",
+      "row": 1, "col": 2,
+      "sources": [{ "path": "agent_desk/view.py", "line": 32, "end_line": 33 }]
+    },
+    {
+      "id": "tohtml", "type": "security", "label": "now_to_html", "sublabel": "екранує у <pre>",
+      "row": 1, "col": 3,
+      "sources": [{ "path": "agent_desk/view.py", "line": 9, "end_line": 29 }]
+    },
+    {
+      "id": "stdout", "type": "external", "label": "stdout", "sublabel": "весь HTML",
+      "row": 2, "col": 0,
+      "sources": [{ "path": "agent_desk/cli.py", "line": 22, "end_line": 23 }]
+    },
+    {
+      "id": "snapshot", "type": "database", "label": "now.html", "sublabel": "статичний знімок",
+      "row": 2, "col": 1,
+      "sources": [{ "path": "agent_desk/cli.py", "line": 19, "end_line": 21 }]
+    },
+    {
+      "id": "nowmd", "type": "database", "label": "NOW.md", "sublabel": "веде exchange",
+      "row": 2, "col": 2,
+      "sources": [
+        { "path": "agent_desk/view.py", "line": 33, "label": "read_text" },
+        { "path": "README.md", "line": 9, "end_line": 11, "label": "джерело стану" }
+      ]
+    },
+    {
+      "id": "shortcut", "type": "frontend", "label": "web/index.html", "sublabel": "сторінка-ярлик",
+      "row": 2, "col": 4,
+      "sources": [{ "path": "web/index.html", "line": 1, "label": "статичний ярлик" }]
+    },
+    {
+      "id": "board", "type": "external", "label": "exchange UI", "sublabel": "127.0.0.1:9750",
+      "row": 3, "col": 2,
+      "sources": [
+        { "path": "agent_desk/view.py", "line": 25, "label": "посилання у <h1>" },
+        { "path": "README.md", "line": 55, "end_line": 58, "label": "сценарій поруч" }
+      ]
+    }
+  ],
+  "connections": [
+    { "id": "user-cli", "from": "user", "to": "cli", "variant": "emphasis" },
+    { "id": "cli-render", "from": "cli", "to": "render", "label": "view", "variant": "emphasis" },
+    { "id": "read-now", "from": "nowmd", "to": "render", "label": "UTF-8", "fromSide": "top", "toSide": "bottom" },
+    { "id": "render-html", "from": "render", "to": "tohtml", "label": "текст", "variant": "emphasis" },
+    { "id": "html-back", "from": "tohtml", "to": "cli", "label": "HTML", "fromSide": "top", "toSide": "top" },
+    { "id": "cli-file", "from": "cli", "to": "snapshot", "label": "-o: файл", "fromSide": "bottom", "toSide": "top" },
+    { "id": "cli-stdout", "from": "cli", "to": "stdout", "label": "print" },
+    { "id": "snap-board", "from": "snapshot", "to": "board", "label": "посилання", "variant": "dashed" },
+    { "id": "short-board", "from": "shortcut", "to": "board", "label": "посилання", "variant": "dashed" },
+    { "id": "board-now", "from": "board", "to": "nowmd", "label": "веде", "variant": "dashed", "fromSide": "top", "toSide": "bottom" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Межа відповідальності",
+      "items": [
+        "Не запускає й не налаштовує agent-exchange",
+        "Немає write API, unlock чи ack",
+        "Немає фонового стеження за NOW.md"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Безпека виводу",
+      "items": [
+        "Вхідний текст екранується і йде у <pre>",
+        "HTML із NOW.md не виконується",
+        "Це не Markdown-рендерер"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Два способи віддати стан",
+      "items": [
+        "З -o: знімок у файл, друкується шлях",
+        "Без -o: весь HTML у stdout",
+        "web/index.html відкривають у браузері як ярлик на дошку"
+      ]
+    }
+  ]
+}
