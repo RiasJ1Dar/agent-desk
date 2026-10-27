@@ -5,14 +5,14 @@
   "status": "fail",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-26T17:45:56.876Z",
+  "startedAt": "2026-10-27T06:07:07.706Z",
   "specification": {
-    "path": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
+    "path": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
     "sha256": "a3c1fb315cce60bf64fb7c2324dc00d477915698c1abc67865aa064c3c504caf",
     "bytes": 5113
   },
   "artifact": {
-    "path": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+    "path": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
     "sha256": "f7d81c1298d6475c116550234044cf00291ad5b032c3c231f7cf94cb3cd05ee8",
     "bytes": 828790
   },
@@ -27,12 +27,12 @@
         "C:\\Users\\Public\\archify-skill\\bin\\archify.mjs",
         "deliver",
         "architecture",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
+        "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
         "--quality",
         "showcase",
         "--repo-root",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk",
+        "C:\\Users\\Public\\archify-push\\agent-desk",
         "--json"
       ],
       "receipt": {
@@ -56,28 +56,28 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 929,
+      "durationMs": 1176,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Public\\archify-skill\\bin\\archify.mjs",
         "deliver",
         "architecture",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
+        "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
         "--quality",
         "showcase",
         "--repo-root",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk",
+        "C:\\Users\\Public\\archify-push\\agent-desk",
         "--json"
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "c75d7690-7034-49d4-abfb-83b31797261b",
+        "receiptId": "8a92aa65-a9bf-4628-a300-b2b63f2c8207",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
-        "input": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
-        "output": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "input": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
+        "output": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
         "specification": {
           "sha256": "a3c1fb315cce60bf64fb7c2324dc00d477915698c1abc67865aa064c3c504caf",
           "bytes": 5113
@@ -116,17 +116,17 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 257,
+      "durationMs": 286,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Public\\archify-skill\\bin\\archify.mjs",
         "check",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
         "--require-provenance"
       ],
       "receipt": {
         "ok": true,
-        "file": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "file": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
         "artifact": {
           "sha256": "f7d81c1298d6475c116550234044cf00291ad5b032c3c231f7cf94cb3cd05ee8",
           "bytes": 828790
@@ -254,18 +254,18 @@
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "c75d7690-7034-49d4-abfb-83b31797261b"
+        "deliveryReceiptId": "8a92aa65-a9bf-4628-a300-b2b63f2c8207"
       }
     },
     "browser-check": {
       "status": "fail",
       "exitCode": 1,
-      "durationMs": 202,
+      "durationMs": 79,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Public\\archify-skill\\bin\\archify.mjs",
         "browser-check",
-        "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
         "--json",
         "--require-provenance"
       ],
@@ -278,9 +278,9 @@
         "status": "fail",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "c75d7690-7034-49d4-abfb-83b31797261b",
+        "deliveryReceiptId": "8a92aa65-a9bf-4628-a300-b2b63f2c8207",
         "artifact": {
-          "path": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+          "path": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
           "sha256": "f7d81c1298d6475c116550234044cf00291ad5b032c3c231f7cf94cb3cd05ee8",
           "bytes": 828790
         },
@@ -289,22 +289,25 @@
           "motion": "still"
         },
         "chrome": {
-          "status": "available",
-          "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+          "status": "not-checked",
+          "executable": null
         },
         "diagnostics": [
           {
-            "code": "viewer/browser-check-runtime",
+            "code": "viewer/evidence-path-conflict",
             "severity": "error",
-            "message": "browser-check could not complete its Chrome inspection.",
+            "message": "browser-check will not replace the existing unowned evidence path \"C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json\".",
             "subject": {
-              "artifact": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html"
+              "artifact": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+              "evidencePath": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json"
             },
             "evidence": {
-              "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v26.5.0, libuv 1.52.1, win32; pid=28964, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+              "reason": {
+                "code": "ownership-sidecar-path-mismatch"
+              }
             },
             "supportedFixes": [
-              "resolve the reported Chrome inspection error, then rerun browser-check"
+              "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
             ]
           }
         ],
@@ -335,7 +338,7 @@
           "receipt": "agent-desk.browser-check.json",
           "files": []
         },
-        "error": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v26.5.0, libuv 1.52.1, win32; pid=28964, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+        "error": "browser-check will not replace the existing unowned evidence path \"C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json\"."
       }
     }
   },
@@ -345,29 +348,32 @@
   },
   "diagnostics": [
     {
-      "code": "viewer/browser-check-runtime",
+      "code": "viewer/evidence-path-conflict",
       "severity": "error",
-      "message": "browser-check could not complete its Chrome inspection.",
+      "message": "browser-check will not replace the existing unowned evidence path \"C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json\".",
       "subject": {
-        "artifact": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html"
+        "artifact": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+        "evidencePath": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json"
       },
       "evidence": {
-        "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v26.5.0, libuv 1.52.1, win32; pid=28964, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+        "reason": {
+          "code": "ownership-sidecar-path-mismatch"
+        }
       },
       "supportedFixes": [
-        "resolve the reported Chrome inspection error, then rerun browser-check"
+        "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
       ]
     }
   ],
   "evidence": {
-    "receipt": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.finalize.json",
-    "summaryReceipt": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.finalize-summary.json",
-    "browserCheckReceipt": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json"
+    "receipt": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.finalize.json",
+    "summaryReceipt": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.browser-check.json"
   },
   "visualReview": "not-requested",
   "failedStage": "browser-check",
-  "finishedAt": "2026-10-26T17:45:58.719Z",
-  "durationMs": 1842,
+  "finishedAt": "2026-10-27T06:07:09.750Z",
+  "durationMs": 2044,
   "update": {
     "status": "current",
     "installedVersion": "3.2.0",

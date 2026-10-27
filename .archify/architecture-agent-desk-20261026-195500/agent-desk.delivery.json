@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "receiptId": "c75d7690-7034-49d4-abfb-83b31797261b",
+  "receiptId": "8a92aa65-a9bf-4628-a300-b2b63f2c8207",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
-  "output": "C:\\Users\\Public\\archify-20261026\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
+  "input": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\candidate.json",
+  "output": "C:\\Users\\Public\\archify-push\\agent-desk\\.archify\\architecture-agent-desk-20261026-195500\\agent-desk.html",
   "specification": {
     "sha256": "a3c1fb315cce60bf64fb7c2324dc00d477915698c1abc67865aa064c3c504caf",
     "bytes": 5113
